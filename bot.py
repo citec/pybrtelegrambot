@@ -32,7 +32,7 @@ def send_help(message):
 Please contribute: https://github.com/citec/pybrtelegrambot
 """)
 
-@bot.message_handler(commands=['invite_link'])
+@bot.message_handler(commands=['invite_link', 'link'])
 def send_invite_link(message):
     chat_id = message.chat.id
     bot.send_message(chat_id, u"""\
