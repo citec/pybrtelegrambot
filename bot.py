@@ -36,7 +36,7 @@ Please contribute: https://github.com/citec/pybrtelegrambot
 def send_invite_link(message):
     chat_id = message.chat.id
     bot.send_message(chat_id, u"""\
-https://telegram.me/joinchat/AG9QCDwzQzvM4tx8Chp-nQ
+https://telegram.me/pythonbr
 """)
 
 
