@@ -28,6 +28,7 @@ def send_help(message):
 /help   Show this help message
 /invite_link Displays invite link
 /where  Show location
+/tips   Show tips for the stay in Florianópolis
 ... (TODO)
 Please contribute: https://github.com/citec/pybrtelegrambot
 """)
@@ -44,6 +45,11 @@ https://telegram.me/pythonbr
 def send_where(message):
     chat_id = message.chat.id
     bot.send_message(chat_id, u'The #pybr12 will take place in Florianópolis')
+
+@bot.message_handler(commands=['tips'])
+def tips(message):
+    chat_id = message.chat.id
+    bot.send_message(chat_id, u'Tips for the stay in Florianópolis: http://blog.pythonbrasil.org.br/dicas-da-cidade-florianopolis.html')
 
 bot.polling()
 
